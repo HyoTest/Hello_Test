@@ -8,18 +8,26 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button button;
+    Button button, button2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         button = (Button)findViewById(R.id.button);
+        button2 = (Button)findViewById(R.id.button2);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Toast.makeText(getApplicationContext(), "Testing......", Toast.LENGTH_SHORT).show();
 
+            }
+        });
+
+        button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getApplicationContext(),"Test2.......",Toast.LENGTH_SHORT).show();
             }
         });
     }
